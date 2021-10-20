@@ -16,12 +16,12 @@ public class Rectangle {
         return length;
     }
 
-    public float getWidth() {
-        return width;
-    }
-
     public void setLength(float length) {
         this.length = length;
+    }
+
+    public float getWidth() {
+        return width;
     }
 
     public void setWidth(float width) {

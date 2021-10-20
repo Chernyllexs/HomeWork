@@ -3,8 +3,8 @@ package com.javaoctoberfest.task.oop_1.book_class;
 import java.util.Arrays;
 
 public class Book {
-    private String name;
-    private Author[] authors;
+    private final String name;
+    private final Author[] authors;
     private double price;
     private int qty = 0;
 
@@ -33,12 +33,12 @@ public class Book {
         return price;
     }
 
-    public int getQty() {
-        return qty;
-    }
-
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getQty() {
+        return qty;
     }
 
     public void setQty(int qty) {
@@ -55,9 +55,9 @@ public class Book {
                 '}';
     }
 
-    public String getAuthorNames(){
+    public String getAuthorNames() {
         StringBuilder stringBuilder = new StringBuilder();
-        for(Author author:authors)
+        for (Author author : authors)
             stringBuilder.append(author.getName()).append(" ");
         return stringBuilder.toString();
     }
