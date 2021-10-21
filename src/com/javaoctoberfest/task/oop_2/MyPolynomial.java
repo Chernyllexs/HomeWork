@@ -1,7 +1,7 @@
 package com.javaoctoberfest.task.oop_2;
 
 public class MyPolynomial {
-    private double[] coeffs;
+    private final double[] coeffs;
 
     public MyPolynomial(double... coeffs) {
         this.coeffs = coeffs;
@@ -19,11 +19,11 @@ public class MyPolynomial {
 
         while ((counter - 1) != getDegree()) {
             if (counter == 0)
-                stringBuilder.append(Double.toString(coeffs[0]));
+                stringBuilder.append(coeffs[0]);
             else if (coeffs[counter] > 0)
-                stringBuilder.append(" + " + Double.toString(coeffs[counter]) + "x^" + counter);
+                stringBuilder.append(" + " + coeffs[counter] + "x^" + counter);
             else if (coeffs[counter] < 0)
-                stringBuilder.append(" - " + Double.toString(Math.abs(coeffs[counter])) + "x^" + counter);
+                stringBuilder.append(" - " + Math.abs(coeffs[counter]) + "x^" + counter);
 
             counter++;
         }
@@ -60,9 +60,9 @@ public class MyPolynomial {
         return new MyPolynomial(newPolynom);
     }
 
-    public MyPolynomial multiply(MyPolynomial polynomial){
+    public MyPolynomial multiply(MyPolynomial polynomial) {
         double[] newPolynom = new double[this.getDegree() + polynomial.getDegree() + 2];
-        for (int i = 0; i <= this.getDegree() ; i++) {
+        for (int i = 0; i <= this.getDegree(); i++) {
             for (int j = 0; j <= polynomial.getDegree(); j++) {
                 newPolynom[i + j] += this.coeffs[i] * polynomial.coeffs[j];
             }

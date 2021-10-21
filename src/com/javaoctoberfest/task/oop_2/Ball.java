@@ -11,9 +11,9 @@ public class Ball {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        if(-180 <= direction && direction <= 180){
+        if (-180 <= direction && direction <= 180) {
             this.xDelta = (float) (speed * Math.cos(direction));
-            this.yDelta = (float) (- speed * Math.sin(direction));
+            this.yDelta = (float) (-speed * Math.sin(direction));
         }
     }
 
@@ -21,52 +21,52 @@ public class Ball {
         return x;
     }
 
-    public float getY() {
-        return y;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public float getxDelta() {
-        return xDelta;
-    }
-
-    public float getyDelta() {
-        return yDelta;
-    }
-
     public void setX(float x) {
         this.x = x;
+    }
+
+    public float getY() {
+        return y;
     }
 
     public void setY(float y) {
         this.y = y;
     }
 
+    public int getRadius() {
+        return radius;
+    }
+
     public void setRadius(int radius) {
         this.radius = radius;
+    }
+
+    public float getxDelta() {
+        return xDelta;
     }
 
     public void setxDelta(float xDelta) {
         this.xDelta = xDelta;
     }
 
+    public float getyDelta() {
+        return yDelta;
+    }
+
     public void setyDelta(float yDelta) {
         this.yDelta = yDelta;
     }
 
-    public void move(){
+    public void move() {
         this.x += xDelta;
         this.y += yDelta;
     }
 
-    public void reflectHorizontal(){
+    public void reflectHorizontal() {
         xDelta = -xDelta;
     }
 
-    public void reflectVertical(){
+    public void reflectVertical() {
         yDelta = -yDelta;
     }
 

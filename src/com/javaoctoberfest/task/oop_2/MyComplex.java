@@ -22,10 +22,6 @@ public class MyComplex {
         return imag;
     }
 
-    public void setReal(double real) {
-        this.real = real;
-    }
-
     public void setImag(double imag) {
         this.imag = imag;
     }
@@ -37,11 +33,15 @@ public class MyComplex {
 
     @Override
     public String toString() {
-        return Double.toString(real) + '+' + Double.toString(imag) + 'i';
+        return Double.toString(real) + '+' + imag + 'i';
     }
 
     public boolean isReal() {
         return (Double.compare(real, 0.0) != 0);
+    }
+
+    public void setReal(double real) {
+        this.real = real;
     }
 
     public boolean isImaginary() {
@@ -102,8 +102,8 @@ public class MyComplex {
     }
 
     public MyComplex divide(MyComplex c) {
-        this.real = (this.getReal() * c.getReal() + this.getReal()*c.getReal()) / Math.pow(c.magnitude(), 2);
-        this.imag = (this.getImag() * c.getReal() - this.getReal()*c.getImag()) / Math.pow(c.magnitude(), 2);
+        this.real = (this.getReal() * c.getReal() + this.getReal() * c.getReal()) / Math.pow(c.magnitude(), 2);
+        this.imag = (this.getImag() * c.getReal() - this.getReal() * c.getImag()) / Math.pow(c.magnitude(), 2);
         return this;
     }
 
