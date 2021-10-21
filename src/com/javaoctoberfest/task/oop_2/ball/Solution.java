@@ -1,4 +1,7 @@
-package com.javaoctoberfest.task.oop_2;
+package com.javaoctoberfest.task.oop_2.ball;
+
+import com.javaoctoberfest.task.oop_2.ball.Ball;
+import com.javaoctoberfest.task.oop_2.ball.Container;
 
 public class Solution {
     public static void main(String[] args) {

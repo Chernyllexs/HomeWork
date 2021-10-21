@@ -1,4 +1,4 @@
-package com.javaoctoberfest.task.oop_2;
+package com.javaoctoberfest.task.oop_2.ball;
 
 public class Ball {
     private float x;

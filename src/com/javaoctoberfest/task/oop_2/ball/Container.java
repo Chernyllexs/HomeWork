@@ -1,4 +1,4 @@
-package com.javaoctoberfest.task.oop_2;
+package com.javaoctoberfest.task.oop_2.ball;
 
 public class Container {
     private int x1, y1, x2, y2;
