@@ -32,10 +32,7 @@ public class Container {
         float ballX2 = ball.getX() - ball.getRadius();
         float ballY2 = ball.getY() - ball.getRadius();
 
-        if (x1 < ballX2 && x2 > ballX1 && y1 > ballY1 && y2 < ballY2)
-            return true;
-        else
-            return false;
+        return  (x1 < ballX2 && x2 > ballX1 && y1 > ballY1 && y2 < ballY2);
     }
 
     @Override
