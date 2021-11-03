@@ -55,6 +55,31 @@ public class Book {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Book book = (Book) o;
+
+        if (Double.compare(book.getPrice(), getPrice()) != 0) return false;
+        if (getQty() != book.getQty()) return false;
+        if (!getName().equals(book.getName())) return false;
+        return Arrays.equals(getAuthors(), book.getAuthors());
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = getName().hashCode();
+        result = 31 * result + Arrays.hashCode(getAuthors());
+        temp = Double.doubleToLongBits(getPrice());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + getQty();
+        return result;
+    }
+
     public String getAuthorNames() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Author author : authors)

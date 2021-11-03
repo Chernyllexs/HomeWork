@@ -23,4 +23,24 @@ public class Author {
                 ", gender=" + gender +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Author author = (Author) o;
+
+        if (gender != author.gender) return false;
+        if (!getName().equals(author.getName())) return false;
+        return email != null ? email.equals(author.email) : author.email == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName().hashCode();
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (int) gender;
+        return result;
+    }
 }

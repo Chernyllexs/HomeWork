@@ -1,5 +1,7 @@
 package com.javaoctoberfest.task.oop_2;
 
+import java.util.Arrays;
+
 public class MyPolynomial {
     private final double[] coeffs;
 
@@ -68,5 +70,20 @@ public class MyPolynomial {
             }
         }
         return new MyPolynomial(newPolynom);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyPolynomial that = (MyPolynomial) o;
+
+        return Arrays.equals(coeffs, that.coeffs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(coeffs);
     }
 }
