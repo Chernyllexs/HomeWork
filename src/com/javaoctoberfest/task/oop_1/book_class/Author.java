@@ -43,4 +43,5 @@ public class Author {
         result = 31 * result + (int) gender;
         return result;
     }
+
 }

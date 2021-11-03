@@ -46,4 +46,24 @@ public class MyTriangle {
             triangleType = "Scalene";
         return triangleType;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyTriangle triangle = (MyTriangle) o;
+
+        if (!v1.equals(triangle.v1)) return false;
+        if (!v2.equals(triangle.v2)) return false;
+        return v3.equals(triangle.v3);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = v1.hashCode();
+        result = 31 * result + v2.hashCode();
+        result = 31 * result + v3.hashCode();
+        return result;
+    }
 }

@@ -43,4 +43,25 @@ public class Circle {
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Circle circle = (Circle) o;
+
+        if (Double.compare(circle.getRadius(), getRadius()) != 0) return false;
+        return getColor().equals(circle.getColor());
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(getRadius());
+        result = (int) (temp ^ (temp >>> 32));
+        result = 31 * result + getColor().hashCode();
+        return result;
+    }
 }

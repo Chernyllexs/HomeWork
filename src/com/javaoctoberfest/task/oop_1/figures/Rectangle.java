@@ -43,4 +43,22 @@ public class Rectangle {
     public double getPerimetr() {
         return (2 * (length + width));
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Rectangle rectangle = (Rectangle) o;
+
+        if (Float.compare(rectangle.getLength(), getLength()) != 0) return false;
+        return Float.compare(rectangle.getWidth(), getWidth()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (getLength() != +0.0f ? Float.floatToIntBits(getLength()) : 0);
+        result = 31 * result + (getWidth() != +0.0f ? Float.floatToIntBits(getWidth()) : 0);
+        return result;
+    }
 }
