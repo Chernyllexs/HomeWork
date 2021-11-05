@@ -1,5 +1,6 @@
 package com.javaoctoberfest.task.Horstmann.chapter_1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Test {
@@ -25,6 +26,7 @@ public class Test {
         scanner.close();
 */
 
+/*
 
         // Exercise 3
         System.out.println("________________________Exercise 3________________________");
@@ -32,6 +34,30 @@ public class Test {
         scanner = new Scanner(System.in);
         Exercise3.maxInteger(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
         scanner.close();
+*/
+
+
+/*
+
+        // Exercise 4
+        System.out.println("________________________Exercise 4________________________");
+        Exercise4.printDoublePositiveValue();
+*/
+
+
+/*
+
+        // Exercise 6
+        System.out.println("________________________Exercise 6________________________");
+        System.out.println("Through for loop: " + Exercise6.factorialOfThousandFor(1000));
+        System.out.println("Through recursion: " + Exercise6.factorialOfThousandRecursion(1000));
+*/
+
+
+        // Exercise 13
+        System.out.println("________________________Exercise 13________________________");
+        ArrayList<Integer> winCombination = Exercise13.lottery();
+        System.out.println("Win combination: " + winCombination.toString());
 
     }
 }
