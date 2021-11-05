@@ -1,9 +1,9 @@
 package com.javaoctoberfest.task.Horstmann.chapter_1;
 
 public class Exercise3 {
-    public static void maxInteger(int a, int b, int c){
+    public static void maxInteger(int a, int b, int c) {
         int maxValue = a;
-        if(maxValue < b)
+        if (maxValue < b)
             maxValue = b;
         if (maxValue < c)
             maxValue = c;

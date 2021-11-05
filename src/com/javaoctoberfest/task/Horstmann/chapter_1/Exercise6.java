@@ -3,14 +3,15 @@ package com.javaoctoberfest.task.Horstmann.chapter_1;
 import java.math.BigInteger;
 
 public class Exercise6 {
-    public static BigInteger factorialOfThousandFor(int count){
+    public static BigInteger factorialOfThousandFor(int count) {
         BigInteger bigInteger = BigInteger.valueOf(1);
-        for (int i = count; i > 0 ; i--) {
+        for (int i = count; i > 0; i--) {
             bigInteger = bigInteger.multiply(BigInteger.valueOf(i));
         }
         return bigInteger;
     }
-    public static BigInteger factorialOfThousandRecursion(int count){
+
+    public static BigInteger factorialOfThousandRecursion(int count) {
         BigInteger bigInteger = BigInteger.valueOf(1);
 
         if (count == 1 || count == 0)
