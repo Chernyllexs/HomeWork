@@ -28,4 +28,5 @@ public class Rectangle extends Shape implements Cloneable {
                 ", top left=" + point +
                 '}';
     }
+
 }

@@ -8,7 +8,7 @@ public abstract class Shape {
         this.point = point;
     }
 
-    public void moveBy(double dx, double dy){
+    public void moveBy(double dx, double dy) {
         point.setXY(point.getX() + dx, point.getY() + dy);
     }
 

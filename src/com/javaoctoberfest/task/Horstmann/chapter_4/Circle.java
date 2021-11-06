@@ -1,6 +1,6 @@
 package com.javaoctoberfest.task.Horstmann.chapter_4;
 
-public class Circle extends Shape implements Cloneable{
+public class Circle extends Shape implements Cloneable {
     private double radius;
 
     public Circle(Point centre, double radius) {

@@ -2,12 +2,12 @@ package com.javaoctoberfest.task.Horstmann.chapter_4;
 
 public class Test {
     public static void main(String[] args) {
-        Circle circle = new Circle(new Point(5, 5),5);
+        Circle circle = new Circle(new Point(5, 5), 5);
         circle.moveBy(5, -5);
         System.out.println(circle);
         System.out.println(circle.getCentre());
 
-        Rectangle rectangle = new Rectangle(new Point(1.5, -1.5),5.5, -3.5);
+        Rectangle rectangle = new Rectangle(new Point(1.5, -1.5), 5.5, -3.5);
         System.out.println(rectangle);
         System.out.println(rectangle.getCentre());
 
