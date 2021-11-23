@@ -10,11 +10,20 @@ public class MyLinkedList<E> implements ILinkedList<E> {
 
     @Override
     public void add(E element) {
-
+        final Node<E> lastNode = last;
+        final Node<E> newNode = new Node<>(lastNode, element, null);
+        last = newNode;
+        if (lastNode == null)
+            first = newNode;
+        else
+            lastNode.next = newNode;
+        size++;
     }
 
     @Override
     public void add(int index, E element) {
+
+        
 
     }
 
@@ -25,7 +34,13 @@ public class MyLinkedList<E> implements ILinkedList<E> {
 
     @Override
     public E get(int index) {
-        return null;
+        Node<E> currentNode = first;
+        if (index >= size || index < 0)
+            throw new ArrayIndexOutOfBoundsException();
+        for (int i = 0; i < index; i++) {
+            currentNode = currentNode.next();
+        }
+        return currentNode.item;
     }
 
     @Override

@@ -1,10 +1,15 @@
 package com.java.october.fest.task.collections;
 
-import java.util.LinkedList;
-import java.util.List;
+import com.java.october.fest.task.collections.solurion.MyLinkedList;
+
+
 
 public class MainTest {
     public static void main(String[] args) {
-        List list = new LinkedList();
+        MyLinkedList<Integer> myList = new MyLinkedList();
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+
     }
 }
