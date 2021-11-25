@@ -18,17 +18,17 @@ public class Map {
         LinkedHashMap<Integer,Point> linkedHashMap = new LinkedHashMap<>();
         TreeMap<Integer,Point> treeMap = new TreeMap<>();
 
-        System.out.println("Время вставки " + SIZE_OF_MAP + " объектов в hashSet " + performance.addToMap(hashMap));
-        System.out.println("Время вставки " + SIZE_OF_MAP + " объектов в linkedHashSet " + performance.addToMap(linkedHashMap));
-        System.out.println("Время вставки " + SIZE_OF_MAP + " объектов в treeSet " + performance.addToMap(treeMap));
+        System.out.println("Время вставки " + SIZE_OF_MAP + " объектов в hashMap " + performance.addToMap(hashMap));
+        System.out.println("Время вставки " + SIZE_OF_MAP + " объектов в linkedHashMap " + performance.addToMap(linkedHashMap));
+        System.out.println("Время вставки " + SIZE_OF_MAP + " объектов в treeMap " + performance.addToMap(treeMap));
 
-        System.out.println("\nВремя добавления объекта в array hashSet " + performance.insertToMap(hashMap, point));
-        System.out.println("Время добавления объекта в linkedHashSet " + performance.insertToMap(linkedHashMap, point));
-        System.out.println("Время добавления объекта в linked treeSet " + performance.insertToMap(treeMap, point));
+        System.out.println("\nВремя добавления объекта в array hashMap " + performance.insertToMap(hashMap, point));
+        System.out.println("Время добавления объекта в linkedHashMap " + performance.insertToMap(linkedHashMap, point));
+        System.out.println("Время добавления объекта в linked treeMap " + performance.insertToMap(treeMap, point));
 
-        System.out.println("\nВремя удаления объекта в hashSet " + performance.removeFromMap(hashMap, point));
-        System.out.println("Время удаления объекта в linkedHashSet " + performance.removeFromMap(linkedHashMap, point));
-        System.out.println("Время удаления объекта в treeSet " + performance.removeFromMap(treeMap, point));
+        System.out.println("\nВремя удаления объекта в hashMap " + performance.removeFromMap(hashMap, point));
+        System.out.println("Время удаления объекта в linkedHashMap " + performance.removeFromMap(linkedHashMap, point));
+        System.out.println("Время удаления объекта в treeMap " + performance.removeFromMap(treeMap, point));
     }
 
     private static class Performance<T extends java.util.Map> {
