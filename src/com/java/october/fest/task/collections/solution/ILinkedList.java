@@ -1,4 +1,4 @@
-package com.java.october.fest.task.collections.solurion;
+package com.java.october.fest.task.collections.solution;
 
 public interface ILinkedList<E> extends Iterable {
     void add(E element);
