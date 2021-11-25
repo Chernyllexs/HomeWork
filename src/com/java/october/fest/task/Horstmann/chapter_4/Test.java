@@ -1,4 +1,4 @@
-package com.javaoctoberfest.task.Horstmann.chapter_4;
+package com.java.october.fest.task.Horstmann.chapter_4;
 
 public class Test {
     public static void main(String[] args) {
