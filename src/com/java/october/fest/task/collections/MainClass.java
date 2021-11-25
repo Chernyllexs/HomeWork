@@ -2,16 +2,20 @@ package com.java.october.fest.task.collections;
 
 import com.java.october.fest.task.collections.solution.MyLinkedList;
 import com.java.october.fest.task.collections.testUtil.Point;
+
 import java.util.LinkedList;
+
+import static com.java.october.fest.task.collections.testUtil.Point.generatePoint;
 
 
 public class MainClass {
     static final int SIZE_OF_LIST = 10000;
+
     public static void main(String[] args) {
         MyLinkedList<Point> myLinkedList = new MyLinkedList<>();
         LinkedList<Point> linkedList = new LinkedList<>();
         long start, stop;
-        Point point = new Point(20.21,20.21);
+        Point point = new Point(20.21, 20.21);
 
         start = System.nanoTime();
         addToMyList(myLinkedList);
@@ -25,12 +29,12 @@ public class MainClass {
 
 
         start = System.nanoTime();
-        myLinkedList.add((int)(Math.random() * SIZE_OF_LIST), point);
+        myLinkedList.add((int) (Math.random() * SIZE_OF_LIST), point);
         stop = System.nanoTime();
         System.out.println("Время вставки одного объекта в MyLinkedList " + (stop - start));
 
         start = System.nanoTime();
-        linkedList.add((int)(Math.random() * SIZE_OF_LIST), point);
+        linkedList.add((int) (Math.random() * SIZE_OF_LIST), point);
         stop = System.nanoTime();
         System.out.println("Время вставки одного объекта в LinkedList " + (stop - start));
 
@@ -53,12 +57,6 @@ public class MainClass {
         linkedList.remove(indexFromList);
         stop = System.nanoTime();
         System.out.println("Время удаления объекта в LinkedList " + (stop - start));
-
-
-    }
-
-    private static Point generatePoint() {
-        return new Point(Math.random() * 10, Math.random() * 10);
     }
 
     private static void addToMyList(MyLinkedList list) {
@@ -72,6 +70,5 @@ public class MainClass {
             list.add(generatePoint());
         }
     }
-
 
 }

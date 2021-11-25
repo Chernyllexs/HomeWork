@@ -1,11 +1,15 @@
 package com.java.october.fest.task.collections.testUtil;
 
-public class Point {
+public class Point implements Comparable<Point> {
     private double x, y;
 
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
+    }
+
+    public static Point generatePoint() {
+        return new Point(Math.random() * 10, Math.random() * 10);
     }
 
     public double getX() {
@@ -57,5 +61,11 @@ public class Point {
         temp = Double.doubleToLongBits(getY());
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+
+    @Override
+    public int compareTo(Point o) {
+        return (int) ((this.x - o.getX()) + (this.y - o.getY()));
     }
 }
